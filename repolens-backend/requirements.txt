@@ -1,0 +1,7 @@
+# RepoLens AI — FastAPI Backend
+# Requirements: pip install fastapi uvicorn gitpython
+
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+gitpython>=3.1.40
+pydantic>=2.5.0

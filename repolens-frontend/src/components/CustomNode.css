@@ -1,0 +1,93 @@
+/* ─── Modern Ultra-Clean Graph Node ─── */
+
+.custom-node {
+  background: rgba(20, 20, 32, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 4px solid var(--node-color, #6366f1);
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 220px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.custom-node:hover {
+  border-color: var(--node-color);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--node-color) 35%, rgba(0,0,0,0.6));
+  transform: translateY(-2px);
+}
+
+.custom-node-selected {
+  border-color: #ffffff !important;
+  box-shadow: 0 0 0 2px var(--node-color), 0 8px 32px rgba(0,0,0,0.8) !important;
+}
+
+.custom-node-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.custom-node-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--node-color) 18%, transparent);
+  color: var(--node-color);
+  flex-shrink: 0;
+}
+
+.custom-node-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.custom-node-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #f4f4f5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-mono, monospace);
+}
+
+.custom-node-sub {
+  font-size: 0.6875rem;
+  color: #a1a1aa;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.custom-node-badge {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.15);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.custom-handle {
+  width: 8px !important;
+  height: 8px !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  border: 1.5px solid #141420 !important;
+  transition: background 0.2s ease;
+}
+
+.custom-node:hover .custom-handle {
+  background: var(--node-color) !important;
+}
